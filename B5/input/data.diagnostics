@@ -1,0 +1,30 @@
+# Diagnostic Package Choices
+#--------------------
+#  dumpAtLast (logical): always write output at the end of simulation (default=F)
+#  diag_mnc   (logical): write to NetCDF files (default=useMNC)
+#--for each output-stream:
+#  fileName(n) : prefix of the output file name (max 80c long) for outp.stream n
+#  frequency(n):< 0 : write snap-shot output every |frequency| seconds
+#               > 0 : write time-average output every frequency seconds
+#  timePhase(n)     : write at time = timePhase + multiple of |frequency|
+#    averagingFreq  : frequency (in s) for periodic averaging interval
+#    averagingPhase : phase     (in s) for periodic averaging interval
+#    repeatCycle    : number of averaging intervals in 1 cycle
+#  levels(:,n) : list of levels to write to file (Notes: declared as REAL)
+#                when this entry is missing, select all common levels of this list
+#  fields(:,n) : list of selected diagnostics fields (8.c) in outp.stream n
+#                (see "available_diagnostics.log" file for the full list of diags)
+#  missing_value(n) : missing value for real-type fields in output file "n"
+#  fileFlags(n)     : specific code (8c string) for output file "n"
+#--------------------
+ &DIAGNOSTICS_LIST
+  fields(1:10,1) = 'UVEL    ','VVEL    ','THETA   ','PHIHYD  ','KLeps   ','KLdiffKr','KLviscAr','WVEL    ','WV_VEL  ','momKE   ',
+   filename(1) = 'diag1',
+  frequency(1) = -900.,
+  fields(1:2,2) = 'ETAN    ','PHIBOT  ',
+   filename(2) = 'diag2',
+  frequency(2) = -900.,
+ &
+
+ &DIAG_STATIS_PARMS
+ &
