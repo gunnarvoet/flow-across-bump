@@ -1,9 +1,11 @@
 Barotropic Flow Across Bump
 ===========================
 
-This repository contains setup files and analysis of a number of 2D mitgcm simulations of flow across a ridge/bump.
+This repository contains setup files and analysis of a number of 2D MITgcm simulations of flow across a ridge/bump.
 
 ![non-hydrostatic](analysis/fig/example_non-hydrostatic.png)
+
+The figure shows a snapshot from the non-hydrostatic run B6 with horizontal velocity (left), vertical velocity (center) and turbulent dissipation (right) and isopycnals on top.
 
 B3
 --
