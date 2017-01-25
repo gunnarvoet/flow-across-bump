@@ -1,0 +1,39 @@
+# Open-boundaries
+ &OBCS_PARM01
+ OB_Jnorth=1*-1,
+ OB_Jsouth=1*1,
+ OB_Ieast=2000*0,
+ OB_Iwest=2000*0,
+# useOrlanskiNorth=.TRUE.,
+# useOrlanskiSouth=.TRUE.,
+# useOrlanskiEast=.FALSE.,
+# useOrlanskiWest=.FALSE.,
+ useOBCSsponge=.FALSE.,
+ useOBCSprescribe=.TRUE.,
+ OBNtFile = 'OB_North_T.bin',
+ OBStFile = 'OB_South_T.bin',
+ OBNvFile = 'OB_V.bin'
+ OBSvFile = 'OB_V.bin'
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+# CMAX=0.45,
+# cvelTimeScale=400.,
+# recip_TimeScale=2.2364E-5,2.3148E-5,2.1944E-5,2.3212E-5,1.1606E-5,1.0759E-5,1.1542E-5,1.0338E-5,
+# Uinflow = 0.00,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
+# tide_theta=1.5708,1.5708,1.5708,1.5708,1.5708,1.5708,
+# tide_alpha=0.3720,0.3593,0.3791,0.3584,0.7167,0.7732,0.7207,0.8046,
+# vToEta=7.517, 
+# dtSouth=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
+# dtNorth =-24367.0,-25035.1,-17119.5,-15404.7,-43124.1,-64109.0,-14971.5,-94428.1,
+ &
+
+# Sponge layer parameters
+ &OBCS_PARM03
+ Urelaxobcsinner=1000.,
+ Urelaxobcsbound=300.,
+ Vrelaxobcsinner=1000.0,
+ Vrelaxobcsbound=300.0,
+ spongeThickness=30,
+ &

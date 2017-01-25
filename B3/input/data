@@ -1,0 +1,94 @@
+ ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ tRefFile='Tref',
+ sRef= 100*35.,
+ viscAz=1.E-5,
+ viscAh=1.0E-4,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.TRUE.,
+ viscA4=0.E12,
+ diffKhT=1.0E-4,
+ diffKzT=1.E-5,
+ diffKhS=1.E3,
+ diffKzS=1.E-5,
+ bottomDragQuadratic=1.E-3,
+# This needs to be reset depending on where model domain starts
+ f0=0.0,
+# this is for a twisted model domain at 45 degreees.
+ beta=0.02E-11,
+ tAlpha=2.E-4,
+ sBeta =0.E-4,
+ gravity=9.81,
+ gBaro=0.98,
+ rigidLid=.FALSE.,
+ implicitFreeSurface=.TRUE.,
+ eosType='LINEAR',
+ nonHydrostatic=.FALSE.,
+ readBinaryPrec=64,
+#- not safe to use globalFiles in multi-processors runs
+#globalFiles=.TRUE.,
+ writeBinaryPrec=64,
+ writeStatePrec=64,
+ saltStepping=.FALSE.,
+# minimum cell fraction.  This reduces steppiness..
+ hFacMin=0.1,
+# implicSurfPress=0.5,
+# implicDiv2DFlow=0.5,
+# nonlinFreeSurf=3,
+# hFacInf=0.2,
+# hFacSup=1.8,
+  exactConserv=.FALSE.,
+  implicitDiffusion=.TRUE.
+  implicitViscosity=.TRUE.
+# Superbee on:
+ tempAdvScheme=77,
+ staggerTimeStep=.TRUE.,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=1000,
+ cg2dTargetResidual=1.E-13,
+ cg3dMaxIters=400,
+ cg3dTargetResidual=1.E-13,
+ &
+
+# Time stepping parameters
+ &PARM03
+ niter0=0,
+ startTime=0,
+# nTimeSteps=18000,
+# change to 48 hours
+ nTimeSteps=11520,
+ deltaT=15,
+ abEps=0.1,
+# pickup freq in seconds. let's do every 12 hours.
+ pChkptFreq=43200,
+ chkptFreq=0.0,
+ taveFreq=86400,
+ dumpFreq=900,
+ monitorFreq=7200,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ usingSphericalPolarGrid=.FALSE.,
+ delYfile='delYvar',
+ delX=5.e3,
+ delRFile = 'delZvar'
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='topo.bin',
+ mdsioLocalDir='./',
+# hydrogThetaFile='T.init',
+# uVelInitFile='U16.init';
+ vVelInitFile='V.init',
+# pSurfInitFile='eta16.init';
+ &
