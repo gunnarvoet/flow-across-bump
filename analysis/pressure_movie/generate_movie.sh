@@ -1,0 +1,1 @@
+ffmpeg -framerate 5 -i frame%03d.png -c:v libx264 -r 30 -pix_fmt yuv420p "$1".mp4
