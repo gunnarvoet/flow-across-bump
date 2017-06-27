@@ -1,0 +1,32 @@
+diag_levels: Idicies of vertical levels within the source arrays
+     Xp1: X-Coordinate of cell corner
+          [meters]
+       Y: Y-Coordinate of cell center
+          [meters]
+       X: X-coordinate of cell center
+          [meters]
+     Yp1: Y-Coordinate of cell corner
+          [meters]
+       T: model_time          
+          [s]
+    iter: iteration_count     
+    UVEL: Zonal Component of Velocity (m/s)
+          [m/s]
+    VVEL: Meridional Component of Velocity (m/s)
+          [m/s]
+   THETA: Potential Temperature
+          [degC]
+  PHIHYD: Hydrostatic Pressure Pot.(p/rho) Anomaly
+          [m^2/s^2]
+   KLeps: KL10 Turbulent dissipation rate
+          [m^2/s^3]
+KLdiffKr: KL10 Vertical diffusion coefficient for tracers
+          [m^2/s]
+KLviscAr: KL10 vertical eddy viscosity coefficient
+          [m^2/s]
+    WVEL: Vertical Component of Velocity (r_units/s)
+          [m/s]
+  WV_VEL: Vertical Transport of Meridional Momentum
+          [m.m/s^2]
+   momKE: Kinetic Energy (in momentum Eq.)
+          [m^2/s^2]

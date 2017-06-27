@@ -1,0 +1,58 @@
+       Z: vertical coordinate of cell center
+          [meters]
+
+      RC: R coordinate of cell center
+          [m]
+     Zp1: vertical coordinate of cell interface
+          [meters]
+
+      RF: R coordinate of cell interface
+          [m]
+      Zu: vertical coordinate of lower cell interface
+          [meters]
+
+      RU: R coordinate of upper interface
+          [m]
+      Zl: vertical coordinate of upper cell interface
+          [meters]
+
+      RL: R coordinate of lower interface
+          [m]
+     drC: r cell center separation
+     drF: r cell face separation
+       X: X-coordinate of cell center
+          [meters]
+       Y: Y-Coordinate of cell center
+          [meters]
+      XC: X coordinate of cell center (T-P point)
+          [degree_east]
+      YC: Y coordinate of cell center (T-P point)
+          [degree_north]
+     Xp1: X-Coordinate of cell corner
+          [meters]
+     Yp1: Y-Coordinate of cell corner
+          [meters]
+      XG: X coordinate of cell corner (Vorticity point)
+          [degree_east]
+      YG: Y coordinate of cell corner (Vorticity point)
+          [degree_north]
+     dxC: x cell center separation
+     dyC: y cell center separation
+     dxF: x cell face separation
+     dyF: y cell face separation
+     dxG: x cell corner separation
+     dyG: y cell corner separation
+     dxV: x v-velocity separation
+     dyU: y u-velocity separation
+      rA: r-face area at cell center
+     rAw: r-face area at U point
+     rAs: r-face area at V point
+     rAz: r-face area at cell corner
+   fCori: Coriolis f at cell center
+  fCoriG: Coriolis f at cell corner
+   R_low: base of fluid in r-units
+ Ro_surf: surface reference (at rest) position
+   Depth: fluid thickness in r coordinates (at rest)
+   HFacC: vertical fraction of open cell at cell center
+   HFacW: vertical fraction of open cell at West face
+   HFacS: vertical fraction of open cell at South face
